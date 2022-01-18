@@ -1,2 +1,7 @@
-package main.java.Exceptions;public class BadParameterException {
+package main.java.Exceptions;
+
+public class BadParameterException extends Exception {
+    public BadParameterException(String message) {
+        super(message);
+    }
 }

@@ -1,2 +1,4 @@
-package main.java.Classes;public class Airline {
+package main.java.Classes;
+
+public class Airline {
 }
