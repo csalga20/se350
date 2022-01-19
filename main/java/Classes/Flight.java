@@ -14,7 +14,7 @@ public class Flight {
     private String flightNumber;
     private Date departureTime;
 
-    public Flight(String line, String airStart, String airEnd, Date date)
+    public Flight(Airline line, Airport airStart, Airport airEnd, Date date)
         throws BadParameterException, NullParameterException
     {
         setAirline(line);
@@ -24,19 +24,19 @@ public class Flight {
         setDepartureTime(date);
     }
 
-    public void setAirline(String line) throws BadParameterException, NullParameterException
+    public void setAirline(Airline line) throws BadParameterException, NullParameterException
     {
-        airline = new Airline(line);
+        airline = line;
     }
 
-    public void setAirportStart(String airStart) throws BadParameterException, NullParameterException
+    public void setAirportStart(Airport airStart) throws BadParameterException, NullParameterException
     {
-        airportStart = new Airport(airStart);
+        airportStart = airStart;
     }
 
-    public void setAirportEnd(String airEnd) throws BadParameterException, NullParameterException
+    public void setAirportEnd(Airport airEnd) throws BadParameterException, NullParameterException
     {
-        airportEnd = new Airport(airEnd);
+        airportEnd = airEnd;
     }
 
 
@@ -88,14 +88,27 @@ public class Flight {
         return Objects.hash(airline, airportStart, airportEnd, flightNumber, departureTime);
     }
 
+
     @Override
     public String toString() {
         return "Flight{" +
-                "airline=" + airline +
-                ", airportStart=" + airportStart +
-                ", airportEnd=" + airportEnd +
-                ", flightNumber='" + flightNumber + '\'' +
-                ", departureTime=" + departureTime +
+                "airline=" + getAirline() +
+                ", airportStart=" + getAirportStart() +
+                ", airportEnd=" + getAirportEnd() +
+                ", flightNumber='" + getFlightNumber() + '\'' +
+                ", departureTime=" + getDepartureTime() +
                 '}';
+    }
+
+    public Airline getAirline() {
+        return airline;
+    }
+
+    public Airport getAirportStart() {
+        return airportStart;
+    }
+
+    public Airport getAirportEnd() {
+        return airportEnd;
     }
 }

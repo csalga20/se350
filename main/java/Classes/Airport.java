@@ -19,7 +19,7 @@ public class Airport {
         {
             throw new NullParameterException("Null value passed for airport name.");
         }
-        if (name.length() != 3)
+        if (name.length() < 3 || name.length() > 3)
         {
             throw new BadParameterException("Name must be 3 capitalized letters.");
         }
@@ -47,7 +47,7 @@ public class Airport {
     @Override
     public String toString() {
         return "Airport{" +
-                "airportName='" + airportName + '\'' +
+                "airportName='" + getAirportName() + '\'' +
                 '}';
     }
 }
