@@ -12,7 +12,6 @@ public class Main {
 
     public static void main(String[] args) throws BadParameterException, NullParameterException {
 	// write your code here
-        System.out.println("test");
 
         //Valid Test Cases
         Airport chicago = new Airport("CHI");
@@ -44,7 +43,7 @@ public class Main {
         //Flight test4 = new Flight(united, denver, chicago, backInTime);
 
 
-        System.out.println(test1);
+        System.out.println(test1 + "\n");
         System.out.println(test2);
 
 

@@ -91,13 +91,22 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight \n{" +
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Airline: " + getAirline()));
+        sb.append(String.format("\nAirport 1: " + getAirportStart()));
+        sb.append(String.format("\nAirport 2:" + getAirportEnd()));
+        sb.append(String.format("\nFlight #:" + getFlightNumber()));
+        sb.append(String.format("\nDeparture date:" + getDepartureTime()));
+        return sb.toString();
+        /*return "Flight \n{" +
                 "\n airline = " + getAirline() +
                 ",\n airportStart = " + getAirportStart() +
                 ",\n airportEnd = " + getAirportEnd() +
                 ",\n flightNumber ='" + getFlightNumber() + '\'' +
                 ",\n departureTime =" + getDepartureTime() +
                 "\n}";
+
+         */
     }
 
     public Airline getAirline() {
