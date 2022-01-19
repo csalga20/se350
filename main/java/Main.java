@@ -26,23 +26,23 @@ public class Main {
         Date afterHw2 = new Date(2022, 07, 19);
 
         //Invalid Test Cases
-        /*
-        Airport invalid = new Airport("pa");
+
+        //Airport invalid = new Airport("pa");
 
 
-        Airline invalidLine = new Airline("American Airlines");
+        //Airline invalidLine = new Airline("American Airlines");
 
         Date backInTime = new Date(2019, 01, 18);
-        */
+
         //Valid Tests
         Flight test1 = new Flight(united, chicago, denver, afterHw);
         Flight test2 = new Flight(spirit, newyorkcity, chicago, afterHw2);
 
         //Invalid Tests
-        /*
-        Flight test3 = new Flight(invalidLine, invalid, newyorkcity, afterHw);
-        Flight test4 = new Flight(united, denver, chicago, backInTime);
-         */
+
+        //Flight test3 = new Flight(invalidLine, invalid, newyorkcity, afterHw);
+        //Flight test4 = new Flight(united, denver, chicago, backInTime);
+
 
         System.out.println(test1);
         System.out.println(test2);

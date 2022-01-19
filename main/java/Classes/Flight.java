@@ -70,7 +70,7 @@ public class Flight {
         }
         if (date.before(when) == true)
         {
-            throw new BadParameterException("Please enter a valid date after the submission date. (2022-01-19");
+            throw new BadParameterException("Please enter a valid date after the submission date. (2022-01-19)");
         }
         departureTime = date;
     }
@@ -91,13 +91,13 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "airline=" + getAirline() +
-                ", airportStart=" + getAirportStart() +
-                ", airportEnd=" + getAirportEnd() +
-                ", flightNumber='" + getFlightNumber() + '\'' +
-                ", departureTime=" + getDepartureTime() +
-                '}';
+        return "Flight \n{" +
+                "\n airline = " + getAirline() +
+                ",\n airportStart = " + getAirportStart() +
+                ",\n airportEnd = " + getAirportEnd() +
+                ",\n flightNumber ='" + getFlightNumber() + '\'' +
+                ",\n departureTime =" + getDepartureTime() +
+                "\n}";
     }
 
     public Airline getAirline() {
