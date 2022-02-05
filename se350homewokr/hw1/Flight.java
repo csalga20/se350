@@ -2,21 +2,19 @@ package se350homewokr.hw1;
 
 import main.java.Exceptions.BadParameterException;
 import main.java.Exceptions.NullParameterException;
-import se350.assignments.homework1.Classes.Airline;
-import se350.assignments.homework1.Classes.Airport;
 
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
 public class Flight {
-    private se350.assignments.homework1.Classes.Airline airline;
-    private se350.assignments.homework1.Classes.Airport airportStart;
-    private se350.assignments.homework1.Classes.Airport airportEnd;
+    private Airline airline;
+    private Airport airportStart;
+    private Airport airportEnd;
     private String flightNumber;
     private Date departureTime;
 
-    public Flight(se350.assignments.homework1.Classes.Airline line, se350.assignments.homework1.Classes.Airport airStart, se350.assignments.homework1.Classes.Airport airEnd, Date date)
+    public Flight(Airline line, Airport airStart, Airport airEnd, Date date)
         throws BadParameterException, NullParameterException
     {
         setAirline(line);
@@ -26,17 +24,17 @@ public class Flight {
         setDepartureTime(date);
     }
 
-    public void setAirline(se350.assignments.homework1.Classes.Airline line) throws BadParameterException, NullParameterException
+    public void setAirline(Airline line) throws BadParameterException, NullParameterException
     {
         airline = line;
     }
 
-    public void setAirportStart(se350.assignments.homework1.Classes.Airport airStart) throws BadParameterException, NullParameterException
+    public void setAirportStart(Airport airStart) throws BadParameterException, NullParameterException
     {
         airportStart = airStart;
     }
 
-    public void setAirportEnd(se350.assignments.homework1.Classes.Airport airEnd) throws BadParameterException, NullParameterException
+    public void setAirportEnd(Airport airEnd) throws BadParameterException, NullParameterException
     {
         airportEnd = airEnd;
     }
@@ -115,7 +113,7 @@ public class Flight {
         return airline;
     }
 
-    public se350.assignments.homework1.Classes.Airport getAirportStart() {
+    public Airport getAirportStart() {
         return airportStart;
     }
 

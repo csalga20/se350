@@ -1,2 +1,4 @@
-package se350homewokr.hw2;public class FlightManager {
+package se350homewokr.hw2;
+
+public class FlightManager {
 }
