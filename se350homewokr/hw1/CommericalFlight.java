@@ -7,14 +7,14 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Flight {
+public class CommericalFlight {
     private Airline airline;
     private Airport airportStart;
     private Airport airportEnd;
     private String flightNumber;
     private Date departureTime;
 
-    public Flight(Airline line, Airport airStart, Airport airEnd, Date date)
+    public CommericalFlight(Airline line, Airport airStart, Airport airEnd, Date date)
         throws BadParameterException, NullParameterException
     {
         setAirline(line);
@@ -79,8 +79,8 @@ public class Flight {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Flight flight = (Flight) o;
-        return airline.equals(flight.airline) && airportStart.equals(flight.airportStart) && airportEnd.equals(flight.airportEnd) && flightNumber.equals(flight.flightNumber) && departureTime.equals(flight.departureTime);
+        CommericalFlight commericalFlight = (CommericalFlight) o;
+        return airline.equals(commericalFlight.airline) && airportStart.equals(commericalFlight.airportStart) && airportEnd.equals(commericalFlight.airportEnd) && flightNumber.equals(commericalFlight.flightNumber) && departureTime.equals(commericalFlight.departureTime);
     }
 
     @Override

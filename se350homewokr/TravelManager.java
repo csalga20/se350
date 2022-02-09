@@ -1,16 +1,15 @@
 package se350homewokr;
 
+import main.java.Exceptions.NullParameterException;
 import se350homewokr.hw1.Airline;
 import se350homewokr.hw1.Airport;
-import se350homewokr.hw1.Flight;
-import main.java.Exceptions.BadParameterException;
-import main.java.Exceptions.NullParameterException;
+import se350homewokr.hw2.FlightManager;
 
 import java.util.Date;
 
 public class TravelManager {
 
-    public static void main(String[] args) throws BadParameterException, NullParameterException {
+    public static void main(String[] args) throws Exception, NullParameterException {
         // write your code here
 
         //Valid Test Cases
@@ -34,21 +33,20 @@ public class TravelManager {
         Date backInTime = new Date(2019, 01, 18);
 
         //Valid Tests
-        Flight test1 = new Flight(united, chicago, denver, afterHw);
-        Flight test2 = new Flight(spirit, newyorkcity, chicago, afterHw2);
+        //CommericalFlight test1 = new CommericalFlight(united, chicago, denver, afterHw);
+        //CommericalFlight test2 = new CommericalFlight(spirit, newyorkcity, chicago, afterHw2);
 
         //Invalid Tests
-
         //Flight test3 = new Flight(invalidLine, invalid, newyorkcity, afterHw);
         //Flight test4 = new Flight(united, denver, chicago, backInTime);
 
-
-        System.out.println(test1 + "\n");
-        System.out.println(test2);
-
+        //System.out.println(test1 + "\n");
+        //System.out.println(test2);
 
         //System.out.println(test3);
         //System.out.println(test4);
+        FlightManager.getInstance();
+        FlightManager.createFlight();
 
     }
 }
