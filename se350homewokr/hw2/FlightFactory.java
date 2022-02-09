@@ -10,13 +10,18 @@ import java.util.Date;
 
 public class FlightFactory {
 
-    public static CommericalFlight createFLight(Airline line, Airport airStart, Airport airEnd, Date date) throws BadParameterException, NullParameterException
+    public static CommericalFlight createFLight(String type, Airline line, Airport airStart, Airport airEnd, Date date) throws BadParameterException, NullParameterException
     {
         if(line == null || airStart == null || airEnd == null || date == null)
         {
             throw new NullParameterException("There are empty values that are required.");
         }
+        if (type.equals("Commercial"))
+        {
             return new CommericalFlight(line, airStart, airEnd, date);
+        }
+        else
+            return null;
     }
 
 }

@@ -12,9 +12,9 @@ import java.util.List;
 
 public final class FlightManager {
 
-    private static List<CommericalFlight> flights = new ArrayList();
+    private static List<CommericalFlight> flights;// = new ArrayList();
 
-    public static List<CommericalFlight> getInstance() throws Exception {
+    public static List<CommericalFlight> getInstance() {
         if (flights == null)
         {
             flights = new ArrayList();
@@ -30,8 +30,9 @@ public final class FlightManager {
     public static void createFlight() throws BadParameterException, NullParameterException
     {
         FlightFactory flightFactory = new FlightFactory();
-        CommericalFlight commericalFlight = flightFactory.createFLight(new Airline("United"), new Airport("CHI"), new Airport("DEN"), new Date(2022, 4, 17) );
+        CommericalFlight commericalFlight = flightFactory.createFLight("Commercial",new Airline("United"), new Airport("CHI"), new Airport("DEN"), new Date(2022, 4, 17) );
         flights.add(commericalFlight);
+        System.out.println(flights.get(0));
     }
 
     public static CommericalFlight getFlightByNumber(int flightNumber) throws BadParameterException, NullParameterException {
