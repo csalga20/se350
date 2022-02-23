@@ -45,7 +45,7 @@ public class TravelManager {
         //System.out.println(test3);
         //System.out.println(test4);
         FlightManager.getInstance();
-        FlightManager.createFlight("Commercial");
+        FlightManager.createFlight("Commercial", "United", "CHI", "DEN");
 
     }
 }
