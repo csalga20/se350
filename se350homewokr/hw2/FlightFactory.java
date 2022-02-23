@@ -5,12 +5,16 @@ import main.java.Exceptions.NullParameterException;
 import se350homewokr.hw1.Airline;
 import se350homewokr.hw1.Airport;
 import se350homewokr.hw1.CommericalFlight;
+import se350homewokr.hw1.Flights;
 
 import java.util.Date;
 
 public class FlightFactory {
 
-    public static CommericalFlight createFLight(String type, Airline line, Airport airStart, Airport airEnd, Date date) throws BadParameterException, NullParameterException
+    private FlightFactory()
+    {
+    }
+    public static Flights createFLight(String type, Airline line, Airport airStart, Airport airEnd, Date date) throws BadParameterException, NullParameterException
     {
         if(line == null || airStart == null || airEnd == null || date == null)
         {
