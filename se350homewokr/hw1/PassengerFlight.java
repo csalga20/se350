@@ -33,7 +33,7 @@ public class PassengerFlight implements Flights{
         }
     }
     public String getFlightNumber() {
-        return null;
+        return flightNumber;
     }
     public Airport getAirportStart() {
         return airportName;

@@ -28,9 +28,6 @@ public class FlightFactory {
         }
         else if (type.equals("passengerFlight"))
         {
-            airlineCache.computeIfAbsent(line, newLine -> {
-                return null;//new PassengerFlight(newLine, airStart, airEnd);
-            });
             return null;
         }
         else
