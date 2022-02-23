@@ -2,10 +2,7 @@ package se350homewokr.hw2;
 
 import main.java.Exceptions.BadParameterException;
 import main.java.Exceptions.NullParameterException;
-import se350homewokr.hw1.Airline;
-import se350homewokr.hw1.Airport;
-import se350homewokr.hw1.CommericalFlight;
-import se350homewokr.hw1.Flights;
+import se350homewokr.hw1.*;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -13,8 +10,8 @@ import java.util.Map;
 
 public class FlightFactory {
 
-    private static Map<Airline, Flights> airlineCache = new HashMap<>();
-    private static Map<Airport, Flights> airportCache = new HashMap<>();
+    private static Map <Airline, Flights> airlineCache = new HashMap<>();
+    private static Map <Airport, Flights> airportCache = new HashMap<>();
 
     private FlightFactory()
     {
@@ -31,6 +28,9 @@ public class FlightFactory {
         }
         else if (type.equals("passengerFlight"))
         {
+            airlineCache.computeIfAbsent(line, newLine -> {
+                return null;//new PassengerFlight(newLine, airStart, airEnd);
+            });
             return null;
         }
         else
