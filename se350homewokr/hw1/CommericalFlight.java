@@ -92,7 +92,8 @@ public class CommericalFlight implements Flights {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("Airline: " + getAirline()));
+        sb.append(String.format("Commercial Flight: "));
+        sb.append(String.format("\nAirline: " + getAirline()));
         sb.append(String.format("\nAirport 1: " + getAirportStart()));
         sb.append(String.format("\nAirport 2:" + getAirportEnd()));
         sb.append(String.format("\nFlight #:" + getFlightNumber()));
