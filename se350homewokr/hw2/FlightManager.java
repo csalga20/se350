@@ -27,9 +27,9 @@ public final class FlightManager {
     {
     }
 
-    public static void createFlight() throws BadParameterException, NullParameterException
+    public static void createFlight(String type) throws BadParameterException, NullParameterException
     {
-        Flights commericalFlight = FlightFactory.createFLight("Commercial",new Airline("United"), new Airport("CHI"), new Airport("DEN"), new Date(2022, 4, 17) );
+        Flights commericalFlight = FlightFactory.createFLight(type,new Airline("United"), new Airport("CHI"), new Airport("DEN"), new Date(2022, 4, 17) );
         flights.add(commericalFlight);
         System.out.println(flights.get(0));
     }
