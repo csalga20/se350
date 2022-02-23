@@ -5,7 +5,7 @@ import main.java.Exceptions.NullParameterException;
 
 import java.util.Objects;
 
-public class Airline {
+public class Airline implements AirlineInterface{
     private String airlineName;
 
     public Airline(String name) throws BadParameterException, NullParameterException
@@ -13,7 +13,7 @@ public class Airline {
         setAirlineName(name);
     }
 
-    private String getAirlineName() {
+    public String getAirlineName() {
         return airlineName;
     }
 
