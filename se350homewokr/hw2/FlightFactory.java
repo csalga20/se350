@@ -8,8 +8,13 @@ import se350homewokr.hw1.CommericalFlight;
 import se350homewokr.hw1.Flights;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FlightFactory {
+
+    private static Map<String, Flights> airlineCache = new HashMap<>();
+    private static Map<String, Flights> airportCache = new HashMap<>();
 
     private FlightFactory()
     {
