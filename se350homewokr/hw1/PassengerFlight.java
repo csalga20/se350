@@ -8,11 +8,16 @@ import java.util.UUID;
 public class PassengerFlight implements Flights{
 
     private String flightNumber;
-    private String airportName;
-    private String airlineName;
+    private Airport airportName;
+    private Airline airlineName;
 
-    public PassengerFlight(String start, String end) throws BadParameterException, NullParameterException
+
+
+    public PassengerFlight(Airline line, Airport start, Airport end) throws BadParameterException, NullParameterException
     {
+        setAirlineName(line);
+        setAirportStart(start);
+        setAirportEnd(end);
         setFlightNumber();
     }
     public void setFlightNumber() throws BadParameterException, NullParameterException
@@ -29,5 +34,26 @@ public class PassengerFlight implements Flights{
     }
     public String getFlightNumber() {
         return null;
+    }
+    public Airport getAirportStart() {
+        return airportName;
+    }
+
+    public void setAirportStart(Airport airportName) {
+        this.airportName = airportName;
+    }
+    public Airport getAirportEnd() {
+        return airportName;
+    }
+    public void setAirportEnd(Airport airportName) {
+        this.airportName = airportName;
+    }
+
+    public Airline getAirlineName() {
+        return airlineName;
+    }
+
+    public void setAirlineName(Airline airlineName) {
+        this.airlineName = airlineName;
     }
 }

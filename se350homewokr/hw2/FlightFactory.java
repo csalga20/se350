@@ -13,8 +13,8 @@ import java.util.Map;
 
 public class FlightFactory {
 
-    private static Map<String, Flights> airlineCache = new HashMap<>();
-    private static Map<String, Flights> airportCache = new HashMap<>();
+    private static Map<Airline, Flights> airlineCache = new HashMap<>();
+    private static Map<Airport, Flights> airportCache = new HashMap<>();
 
     private FlightFactory()
     {
