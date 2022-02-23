@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class FlightFactory {
 
-    private static Map <Airline, Flights> airlineCache = new HashMap<>();
+    private static Map <Airline, Flights> airlineCache = new HashMap<Airline, Flights>();
     private static Map <Airport, Flights> airportCache = new HashMap<>();
 
     private FlightFactory()
