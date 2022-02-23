@@ -20,6 +20,10 @@ public class FlightFactory {
         {
             return new CommericalFlight(line, airStart, airEnd, date);
         }
+        else if (type.equals("passengerFlight"))
+        {
+            return null;
+        }
         else
             return null;
     }

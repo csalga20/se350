@@ -27,7 +27,6 @@ public class TravelManager {
 
         //Airport invalid = new Airport("pa");
 
-
         //Airline invalidLine = new Airline("American Airlines");
 
         Date backInTime = new Date(2019, 01, 18);

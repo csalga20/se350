@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
-public class CommericalFlight {
+public class CommericalFlight implements Flights {
     private Airline airline;
     private Airport airportStart;
     private Airport airportEnd;
