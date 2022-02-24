@@ -30,10 +30,10 @@ public final class FlightManager {
     public static void createFlight(String type, String airline, String start, String end) throws BadParameterException, NullParameterException
     {
         //Flights paassengerFlight = FlightFactory.createFLight(type,new Airline(airline), new Airport(start), new Airport(end), new Date(2022, 4, 17) );
-        Flights commericalFlight = FlightFactory.createFLight(type,new Airline(airline), new Airport(start), new Airport(end), new Date(2022, 4, 17) );
-        flights.add(commericalFlight);
+        Flights fl = FlightFactory.createFLight(type,new Airline(airline), new Airport(start), new Airport(end), new Date(2022, 4, 17) );
+        flights.add(fl);
         //flights.add(paassengerFlight);
-        System.out.println(flights.get(0));
+        //System.out.println(flights.get(0));
         //System.out.println(flights.get(1));
     }
 
@@ -49,7 +49,17 @@ public final class FlightManager {
         }
         return null;
     }
-
+    public static Flights printFlights()
+    {
+        if(!flights.isEmpty())
+        {
+            for (int i = 0; i < flights.size(); i++) {
+                Flights fl = flights.get(i);
+                return fl;
+            }
+        }
+        return null;
+    }
 
 }
 

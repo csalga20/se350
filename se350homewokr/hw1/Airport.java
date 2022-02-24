@@ -5,7 +5,7 @@ import main.java.Exceptions.NullParameterException;
 
 import java.util.Objects;
 
-public class Airport {
+public class Airport implements AirportInterface{
     private String airportName;
 
     public Airport(String name) throws BadParameterException, NullParameterException

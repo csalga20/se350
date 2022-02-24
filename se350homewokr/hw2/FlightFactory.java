@@ -10,8 +10,8 @@ import java.util.Map;
 
 public class FlightFactory {
 
-    private static Map <Airline, Flights> airlineCache = new HashMap<Airline, Flights>();
-    private static Map <Airport, Flights> airportCache = new HashMap<>();
+    private static Map <String, Airline> airlineCache = new HashMap<>();
+    private static Map <String, Airport> airportCache = new HashMap<>();
 
     private FlightFactory()
     {
@@ -26,15 +26,39 @@ public class FlightFactory {
         {
             return new CommericalFlight(line, airStart, airEnd, date);
         }
-        else if (type.equals("passengerFlight"))
+        else if (type.equals("Passenger"))
         {
-            /*airlineCache.computeIfAbsent(line, newLine -> {
-                return new Airline(line);
-            });*/
-            return null;
+            return new PassengerFlight(line, airStart, airEnd);
         }
         else
             return null;
     }
+    public static Airline getAirline(String airlineName)
+    {
+        return airlineCache.computeIfAbsent(airlineName, name -> {
+            try {
+                return new Airline(airlineName);
+            } catch (BadParameterException e) {
+                e.printStackTrace();
+            } catch (NullParameterException e) {
+                e.printStackTrace();
+            }
+            return null;
+        });
+    }
+    public static Airport getAirport(String airportName)
+    {
+        return airportCache.computeIfAbsent(airportName, name -> {
+            try {
+                return new Airport(airportName);
+            } catch (BadParameterException e) {
+                e.printStackTrace();
+            } catch (NullParameterException e) {
+                e.printStackTrace();
+            }
+            return null;
+        });
+    }
+
 
 }
